@@ -1,2 +1,2 @@
-# Data Structures and Classic Algorithms
-A collection of data structures. 
+# Data Structures and Algorithms
+A collection of data structures and algorithms.
