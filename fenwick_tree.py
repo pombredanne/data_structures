@@ -18,6 +18,14 @@ class FenwickTree:
         for i in range(1, self.maxval):
             self.add_value(i, arr[i-1])
 
+    def get_all(self):
+        '''
+        Returns the entire tree array i.e. cumulative sum array
+
+        :return: entire tree array
+        '''
+        return self.tree
+
     def get_cumulative_sum(self, index):
         '''
         Computes the cumulative sum from 0 to specified index
@@ -123,4 +131,5 @@ if __name__ == '__main__':
     print('Scale by 3')
     fenwick_tree.scale(3)
     print('get(5): %f' % fenwick_tree.get(5))
+
 
