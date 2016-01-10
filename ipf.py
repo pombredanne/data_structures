@@ -4,12 +4,12 @@ __author__ = 'Paul Tune'
 
 
 class IPF:
-    '''
+    """
     Iterative proportional fitting: scales a non-negative matrix according to
     row and column sum constraints. Requires Numpy.
-    '''
+    """
     def l1_error(self, mtx, rowsum, colsum):
-        '''
+        """
         L1 error criterion. Used to compute the termination criterion of
         IPF.
 
@@ -17,14 +17,14 @@ class IPF:
         :param rowsum: row sum constraints
         :param colsum: column sum constraints
         :return:
-        '''
+        """
         rtol = abs(rowsum - mtx.sum(1))
         ctol = abs(colsum - mtx.sum(0))
 
         return rtol.sum() + ctol.sum()
 
     def run(self, mtx, rowsum, colsum, tol=1e-3, maxiter=100):
-        '''
+        """
         Run Iterative Proportional Fitting algorithm on a non-negative matrix
         with specified row and column sum constraints. Requires Numpy.
 
@@ -34,7 +34,7 @@ class IPF:
         :param tol: (optional) tolerance parameter (default: 1e-3)
         :param maxiter: (optional) maximum number of iterations (default: 100)
         :return:
-        '''
+        """
         if len(mtx) == 0:
             print("Empty matrix")
             return
@@ -79,6 +79,7 @@ class IPF:
 
                 for j in range(n):
                     # scale rows
+                    mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i, 0]
                     mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i, 0]
 
                     # scale columns
