@@ -202,6 +202,12 @@ class GeneralCountMinSketch:
         else:
             self.sketch_positive.update(item, count)
 
+    def csv_update(self, item, count=1):
+        if count < 0:
+            self.sketch_negative.csv_update(item, count)
+        else:
+            self.sketch_positive.csv_update(item, count)
+
     def query(self, item):
         return self.sketch_positive.query(item) - self.sketch_negative.query(item)
 
@@ -219,6 +225,11 @@ def main():
     cms.csv_update('Hillary', 7)
     print(cms.query(4))
     print(cms.query('Hillary'))
+
+    gcms = GeneralCountMinSketch(1000, 10)
+    gcms.update("Test", count=10)
+    gcms.update("Test", count=-5)
+    print(gcms.query("Test"))
 
 if __name__ == '__main__':
     main()
