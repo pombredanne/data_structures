@@ -1,5 +1,9 @@
-import numpy as np
+try:
+    import numpy as np
+except:
+    raise ImportError("Requires Numpy >= 1.10")
 
+__date__ = '10 Jan 2016'
 __author__ = 'Paul Tune'
 
 
