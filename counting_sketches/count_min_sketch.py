@@ -216,20 +216,3 @@ class GeneralCountMinSketch:
 
     def __len__(self):
         return self.sketch_positive.num_items
-
-def main():
-    # data_stream = [(1,2), (4,1)]
-    # cms = CountMinSketch(0.1,0.1,row_col=False)
-    cms = CountMinSketch(1000, 10)
-    cms.csv_update(4, 2)
-    cms.csv_update('Hillary', 7)
-    print(cms.query(4))
-    print(cms.query('Hillary'))
-
-    gcms = GeneralCountMinSketch(1000, 10)
-    gcms.update("Test", count=10)
-    gcms.update("Test", count=-5)
-    print(gcms.query("Test"))
-
-if __name__ == '__main__':
-    main()
