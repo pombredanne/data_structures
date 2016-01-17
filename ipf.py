@@ -40,32 +40,26 @@ class IPF:
         :return:
         """
         if len(mtx) == 0:
-            print("Empty matrix")
-            return
+            raise ValueError("Empty matrix")
 
         m = mtx.shape[0]
         n = mtx.shape[1]
 
         # sanity checks
         if rowsum.shape[0] != m:
-            print("Row sum constraints do not match number of columns in A")
-            return
+            raise ValueError("Row sum constraints do not match number of columns in A")
 
         if colsum.shape[1] != n:
-            print("Column sum constraints do not match number of rows in A")
-            return
+            raise ValueError("Column sum constraints do not match number of rows in A")
 
         if rowsum.min() < 0:
-            print("Row sum constraints must be non-negative")
-            return
+            raise ValueError("Row sum constraints must be non-negative")
 
         if colsum.min() < 0:
-            print("Column sum constraints must be non-negative")
-            return
+            raise ValueError("Column sum constraints must be non-negative")
 
         if mtx.min() < 0:
-            print("Input matrix must be non-negative")
-            return
+            raise ValueError("Input matrix must be non-negative")
 
         iteration = 0
         while iteration < maxiter:
