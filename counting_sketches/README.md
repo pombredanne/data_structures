@@ -20,7 +20,7 @@ The Tug-of-War Sketch estimates the second moment of a data stream in logarithmi
 is a minimalistic implementation which has no dependencies because it uses the MD5 hash 
 (which admittedly is slow). Modification to using the Murmur hash or xxhash can be done easily.
 
-1. Alon N., Matias Y., Szegedy M. The space complexity of approximating the frequency moments J. Comput. System Sci. (1996) pp. 20-29.
+1. Alon N., Matias Y., Szegedy M. The space complexity of approximating the frequency moments. J. Comput. System Sci. (1996) pp. 20-29.
 2. Chakrabarti A. CS49: Data Stream Algorithms, Lecture Notes, Fall 2011. Chapter 6.
 
 **ApproximateCounting**
