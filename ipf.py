@@ -91,26 +91,3 @@ class IPF:
             print('Maximum number of iterations exceeded')
 
         return
-
-
-if __name__ == '__main__':
-    print('Test IPF')
-
-    A = np.matrix('1.0 2 3;  4 5 6; 7 8 9')
-    r = np.matrix('1.0; 1.0; 1.0')
-    c = np.matrix('1.0 1.0 1.0')
-    t = np.matrix('0; 1; 0')
-
-    print('Initial matrix')
-    print(A)
-
-    ipf = IPF()
-    ipf.run(A, r, c)
-
-    print('\n')
-    print('Final matrix')
-    print(A)
-
-    print('\n')
-    print('L1 error at termination')
-    print(ipf.l1_error(A, r, c))
