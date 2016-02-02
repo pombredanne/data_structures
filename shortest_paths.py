@@ -1,6 +1,6 @@
 import numpy as np
 import sys
-from heapq import heappop, heappush, _siftdown
+from heapq import heappop, heappush
 
 __author__ = 'Paul Tune'
 __date__ = '19 Jan 2016'
@@ -10,7 +10,7 @@ def floyd(n, weight_mtx):
     """
     Classic Floyd-Warshall all shortest paths algorithm. Also returns the predecessor matrix.
 
-    :param weight_mtx: matrix of link weights (must be non-negative)
+    :param weight_mtx: matrix of link weights
     :return: distance matrix and predecessor matrix
     """
     # initialize
