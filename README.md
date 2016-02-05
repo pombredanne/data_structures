@@ -5,3 +5,4 @@ A collection of data structures and algorithms.
 2. ipf.py: Implementation of Iterative Proportional Fitting, a scaling procedure on non-negative matrices (e.g. contingency tables) to ensure the marginals are met to specified row and column sum constraints.
 3. counting_sketches: library of several well-known sketches for counting items on data streams, including the Count Min Sketch and the Morris counter.
 4. shortest_paths.py: implements the computation of all shortest paths on a graph via the Floyd-Warshall and Dijkstra algorithm.
+5. priority_queue.py: priority queue implementation via heaps.
