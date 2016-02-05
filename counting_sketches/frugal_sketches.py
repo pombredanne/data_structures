@@ -19,7 +19,7 @@ class FrugalSketches():
        Andrej Brodnik, Alejandro Lopez-Ortiz, Venkatesh Raman and Alfredo Viola (Eds.), LNCS 8066,
        Springer, 2013.
     """
-    def __init__(self, count=0, h=1, k=2, f=lambda x: x):
+    def __init__(self, count=0, h=1, k=2, f=1):
         """
         Initialize the sketch. See the class functions for usage examples.
 
