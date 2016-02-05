@@ -31,3 +31,14 @@ Precursor to modern sketches.
 
 1. Morris, R. Counting large numbers of events in small registers. Communications of the ACM 21, 10 (1977), 840–842.
 2. Flajolet, P. Approximate Counting: A Detailed Analysis. BIT 25, (1985), 113-134.
+
+**FrugalSketches**
+
+Low memory sketches to estimate quantiles in a datastream, specifically, the median and the h-th k-th quantile, which is
+defined as the x such that Pr(X < x) = h/k. Requires only a single or two memory units, where a memory unit is defined as a sufficient
+bits to store the input stream's domain. Works on set of integers distributed over {1,2,...,N} (rescaling is required for a data
+stream of floating point numbers).
+
+1. Ma Q., Muthhukrishnan S., Sandler M. Frugal Streaming for Estimating Quantiles. Space Efficient Data Structures, Streams and 
+Algorithms, Festchrift in Honor of J. Ian Munro, Andrej Brodnik, Alejandro Lopez-Ortiz, Venkatesh Raman and Alfredo Viola (Eds.), LNCS
+8066, Springer, 2013.
