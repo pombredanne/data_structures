@@ -77,11 +77,11 @@ class IPF:
 
                 for j in range(n):
                     # scale rows
-                    mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i, 0]
-                    mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i, 0]
+                    mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i]
+                    mtx[i, j] = float(rowsum[i, 0])*mtx[i, j]/current_row_sum[i]
 
                     # scale columns
-                    mtx[i, j] = float(colsum[0, j])*mtx[i, j]/current_col_sum[0, j]
+                    mtx[i, j] = float(colsum[0, j])*mtx[i, j]/current_col_sum[j]
 
             iteration += 1
 
