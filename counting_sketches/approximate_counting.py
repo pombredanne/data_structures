@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 try:
     import bitarray
 except:
@@ -19,9 +22,9 @@ class ApproximateCounter:
         self.num_counters = num_counters
         self.counters = [0] * self.num_counters
         # initialize counters
-        # self.counters = []
-        # for _ in range(num_counters):
-        #     self.counters.append(bitarray(2**counter_size))
+        self.counters = []
+        for _ in range(num_counters):
+            self.counters.append(bitarray(2**counter_size))
 
     def update(self, item):
         # flip the count equal to the count of the counter

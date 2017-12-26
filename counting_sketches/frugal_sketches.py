@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from random import random
 from math import ceil
 
@@ -6,7 +8,7 @@ __author__ = 'Paul Tune'
 __date__ = '05 Feb 2016'
 
 
-class FrugalSketches():
+class FrugalSketches:
     """
     Implementation of very low memory sketches for estimating quantiles in data streams. These
     algorithms were developed by Qiang et al. [1]. Designation of U determines memory unit usage

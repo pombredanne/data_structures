@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 try:
     import xxhash
 except:
@@ -19,7 +20,7 @@ class CountMinSketch:
     for the cash register model. All item counts must be non-negative. Essentially a
     two-dimensional hash table. Allows point query of unique items stored in the sketch.
 
-    There are two ways to  construct CountMinSketch:
+    There are two ways to construct CountMinSketch:
 
         1. set row_col=True: param1 and param2 are the number of rows and columns respectively,
         2. set row_col=False: param1 and param2 are the error margin and error probability

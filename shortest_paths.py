@@ -1,9 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from heapq import heappop, heappush
 
 __author__ = 'Paul Tune'
 __date__ = '19 Jan 2016'
+
 
 # TODO: negative cycle detection?
 def floyd(n, weight_mtx):
@@ -14,7 +17,7 @@ def floyd(n, weight_mtx):
     :return: distance matrix and predecessor matrix
     """
     # initialize
-    dist_mtx = sys.maxsize*np.ones((n, n)) # set to MAXSIZE
+    dist_mtx = sys.maxsize*np.ones((n, n))  # set to MAXSIZE
     pred_mtx = np.zeros((n, n))
     for i in range(n):
         for j in range(n):
@@ -48,7 +51,7 @@ def dijkstra(n, weight_mtx):
     :return: distance matrix and predecessor matrix
     """
     # initialize
-    dist_mtx = sys.maxsize*np.ones((n, n)) # set to MAXSIZE
+    dist_mtx = sys.maxsize*np.ones((n, n))  # set to MAXSIZE
     pred_mtx = np.zeros((n, n))
     for i in range(n):
         for j in range(n):

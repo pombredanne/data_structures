@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from heapq import heapify, heappop, heappush
 
 __author__ = 'Paul Tune'
 __date__ = '22 Jan 2016'
+
 
 class PriorityQueueSet(object):
     """
