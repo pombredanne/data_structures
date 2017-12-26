@@ -52,6 +52,7 @@ def dijkstra(n, weight_mtx):
     """
     Classic Dijkstra all shortest paths algorithm. Heap-based implementation.
 
+    :param n: number of nodes in the graph
     :param weight_mtx: matrix of link weights (must be non-negative)
     :return: distance matrix and predecessor matrix
     """
