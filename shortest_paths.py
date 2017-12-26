@@ -8,7 +8,6 @@ __author__ = 'Paul Tune'
 __date__ = '19 Jan 2016'
 
 
-# TODO: negative cycle detection?
 def floyd(n, weight_mtx):
     """
     Classic Floyd-Warshall all shortest paths algorithm. Also returns the predecessor matrix.
