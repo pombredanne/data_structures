@@ -13,10 +13,12 @@ def floyd(n, weight_mtx):
     """
     Classic Floyd-Warshall all shortest paths algorithm. Also returns the predecessor matrix.
 
+    :param n: number of nodes in the graph
     :param weight_mtx: matrix of link weights
     :return: distance matrix and predecessor matrix
     """
     # initialize
+    has_negative_cycle = False
     dist_mtx = sys.maxsize*np.ones((n, n))  # set to MAXSIZE
     pred_mtx = np.zeros((n, n))
     for i in range(n):
@@ -39,7 +41,11 @@ def floyd(n, weight_mtx):
                     # update predecessor matrix
                     pred_mtx[i][j] = pred_mtx[k][j]
 
-    return dist_mtx, pred_mtx
+    for i in range(n):
+        if dist_mtx[i][i] < 0:
+            has_negative_cycle = True
+
+    return dist_mtx, pred_mtx, has_negative_cycle
 
 
 # TODO: implement Bellman-Ford
